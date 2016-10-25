@@ -1,14 +1,16 @@
 var express = require('express');
 var router = express.Router();
-var controller = require('../controllers/twatt')
+var controller = require('../controllers/api')
 var auth = require('../config/config')
 var OAuth = require('oauth')
 
 
-/* GET home page. */
-router.get('/', controller.getHome)
+/* GET API */
+router.get('/home', controller.getHomeAPI)
 
-router.get('/search', controller.getSearch)
+router.get('/search', controller.getSearchAPI)
+
+router.get('/timeline', controller.getTimelineAPI)
 
 
 module.exports = router;

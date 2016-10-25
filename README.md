@@ -8,33 +8,10 @@ express --ejs
 npm install
 ```
 
-## Intall Twit or OAuth
-
-```
-npm install twit --save
-```
-
-OR
+## Intall OAuth
 
 ```
 npm install oauth --save
-```
-
-## Twit Usage
-
-```javascript
-var Twit = require('twit')
-
-var T = new Twit ({
-  consumer_key:         CONSUMER_KEY,
-  consumer_secret:      CONSUMER_SECRET,
-  access_token:         ACCESS_TOKEN,
-  access_token_secret:  ACCESS_TOKEN_SECRET
-})
-
-T.get('search/tweets', { q: 'banana since:2011-07-11', count: 100 }, function(err, data, res) {
-  res.json(data)
-})
 ```
 
 ## OAuth Usage
@@ -75,9 +52,20 @@ module.exports = {
 }
 ```
 
+## API for Home
+
+```
+http://localhost:3000/api/home
+```
+
 ## API for Search
 
 ```
-http://localhost:3000/oauth/search?q=KEYWORD
-http://localhost:3000/twit/search?q=KEYWORD
+http://localhost:3000/api/search?q=KEYWORD
+```
+
+## API for Timeline
+
+```
+http://localhost:3000/api/timeline
 ```

@@ -34,6 +34,7 @@ var T = new Twit({
 
 module.exports = {
 
+  //view
   getHome: function (req, res) {
     // var url = 'https://api.twitter.com/1.1/search/tweets.json?q=' + req.query.q
     var url = 'https://api.twitter.com/1.1/statuses/home_timeline.json'
@@ -47,32 +48,10 @@ module.exports = {
     var url = 'https://api.twitter.com/1.1/search/tweets.json?q=' + req.query.q
     test(url, function (data) {
       // console.log(data)
-      res.render('search', {title: "Home", search:JSON.parse(data)})
+      res.render('search', {title: "Search", search:JSON.parse(data)})
     })
   },
 
-  getSearchOauth: function (req, res) {
-    var url = 'https://api.twitter.com/1.1/search/tweets.json?q=' + req.query.q
-    test(url, function (data) {
-      res.json(JSON.parse(data))
-    })
-  },
-
-  getTimelineOauth: function (req, res) {
-    var url = 'https://api.twitter.com/1.1/statuses/user_timeline.json'
-    test(url, function (data) {
-      res.json(JSON.parse(data))
-    })
-  },
-
-  getSearchTwit: function (req, res) {
-
-    T.get('search/tweets', { q: req.query.q, count: 100 }, function (err, data, response) {
-      // console.log(data)
-      // res.json(data.statuses[0].text)
-      res.json(data)
-    })
-  },
 
   getTimeline: function (req, res) {
     var url = 'https://api.twitter.com/1.1/statuses/user_timeline.json'
@@ -80,14 +59,6 @@ module.exports = {
       // res.json(JSON.parse(data))
       res.render('timeline', {title: "Timeline", timeline:JSON.parse(data)})
     })
-  },
-
-  // getTimelineTwit: function (req, res) {
-  //   T.get('search/tweets', { q: req.query.q, count: 100 }, function (err, data, response) {
-  //     // console.log(data)
-  //     // res.json(data.statuses[0].text)
-  //     res.json(data)
-  //   })
-  // }
+  }
 
 }

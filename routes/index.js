@@ -10,15 +10,8 @@ router.get('/', controller.getHome)
 
 router.get('/search', controller.getSearch)
 
+router.get('/timeline', controller.getTimeline)
 
-router.get('/oauth/search', controller.getSearchOauth);
-
-router.get('/oauth/timeline', controller.getTimelineOauth);
-
-
-router.get('/twit/search', controller.getSearchTwit)
-
-// router.get('/twit/timeline', controller.getTimelineTwit)
 
 
 module.exports = router;
