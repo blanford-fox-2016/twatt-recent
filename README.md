@@ -1,5 +1,7 @@
-# twatt by tamatamvan
+# twatt-recent by tamatamvan
 A simple example for REST API with OAuth implementation using **Node.JS 6, Express, OAuth and Twitter API **
+
+This program get the recent tweets from your home timeline, and your timeline.
 
 
 ## Technology
@@ -24,7 +26,8 @@ You can insert your Twitter API customer keys and token in `config/config.js` fi
 ├── config
 │   └── config.js
 ├── controllers
-│   └── TwitterController.js
+│   ├── TwitterController.js
+│   └── UIController.js
 ├── helpers
 │   └── oauthTwitter.js
 ├── package.json
@@ -34,13 +37,12 @@ You can insert your Twitter API customer keys and token in `config/config.js` fi
 │   └── stylesheets
 ├── routes
 │   ├── index.js
-│   ├── twatt.js
-│   └── users.js
+│   └── twatt.js
 └── views
     ├── error.jade
     ├── index.jade
     ├── layout.jade
-    └── user.jade
+    └── my_timeline.jade
 ```
 
 
@@ -48,7 +50,7 @@ You can insert your Twitter API customer keys and token in `config/config.js` fi
 
 ```
 {
-  "name": "twatt",
+  "name": "twatt-recent",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -67,7 +69,7 @@ You can insert your Twitter API customer keys and token in `config/config.js` fi
 }
 ```
 
-## Running twatt on your machine
+## Running twatt-recent on your machine
 Here are some steps you've to follow for running this twatt API on your machine :
 * `cd your_program_directory`
 * `npm install` (Install all dependencies of this program)
@@ -82,7 +84,17 @@ List off all routes :
 |--------|------|-------------|
 |http://localhost:3000/twatt/home_timeline | GET | Get recent tweets from your home timeline|
 |http://localhost:3000/twatt/my_timeline | GET | Get recent tweets from your timeline|
-|http://localhost:3000/twatt/search/tweet/:your_keyword | GET | Search tweets with a spesific keyword|
+
+## Accessing Data via Web Interface
+
+List of link :
+
+You can access the data via web Interface by opening these link bellow to your web browser.
+
+|  Route | Description |
+|--------|-------------|
+| http://localhost:3000/ | Get recent tweets from your home timeline |
+| http://localhost:3000/twatt/my_timeline | Get recent tweets from your timeline |
 
 
 ## Contact

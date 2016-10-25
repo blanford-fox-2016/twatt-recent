@@ -6,7 +6,7 @@ module.exports = {
 
     AuthTwitter.getData(link, (data) => {
       data = JSON.parse(data)
-      res.render('my_timeline', { data });
+      res.render('my_timeline', { title: 'User Timeline', data });
     });
   },
 
@@ -15,7 +15,7 @@ module.exports = {
 
     AuthTwitter.getData(link, (data) => {
       data = JSON.parse(data)
-      res.render('index', { data });
+      res.render('index', { title: 'Home Timeline', data });
     });
   },
 }
