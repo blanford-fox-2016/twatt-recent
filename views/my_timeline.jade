@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  .container
+    h3 My Timeline
+    - for(var i = 0; i < data.length; i++)
+      .panel.panel-primary
+        .panel-heading
+          h2.panel-title #{data[i].user.name} - @#{data[i].user.screen_name}`
+        .panel-body= data[i].text
