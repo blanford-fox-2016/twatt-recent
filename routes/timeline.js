@@ -5,7 +5,7 @@ var controller = require('../controller/UIController')
 // ============================================
 // View
 //=============================================
-router.get('/', controller.viewHome);
+router.get('/', controller.viewTimeline);
 
 
 

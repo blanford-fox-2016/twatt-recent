@@ -1,5 +1,14 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  .container
+    h1= title
+    p Home #{title}
+    table
+      - for(var i = 0 ; i < show_data_home.length ; i++)
+          thead
+           tr
+            th(data-field="id") Name: #{show_data_home[i].user.name} - @#{show_data_home[i].user.screen_name}
+           tbody
+             tr
+               td #{show_data_home[i].text}

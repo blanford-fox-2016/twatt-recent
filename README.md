@@ -10,21 +10,14 @@ Username's twitter : [twitter.comkenduigraha](kenduigraha)
 > `curl -X GET "localhost:3000/oauth/home"`
 
 * POSTMAN
-> Click Authorization
-
-> Type: OAuth 1.0
-
-> Consumer Key : <consumer_key>
-
-> Consumer Secret : <consumer_secret>
-
-> Token : <token>
-
-> Token Secret : <token_secret>
-
-> Click Update Request
-
-> Click Send
+  1. Click Authorization
+  2. Type: OAuth 1.0
+  3. Consumer Key : <consumer_key>  
+  4.  Consumer Secret : <consumer_secret>
+  5. Token : <token>
+  6. Token Secret : <token_secret>
+  7. Click Update Request
+  8. Click Send
 ************************************
 
 ## Installation:

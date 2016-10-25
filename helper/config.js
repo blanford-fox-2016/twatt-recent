@@ -5,5 +5,6 @@ module.exports = {
   application_secret: '5zx2m7CI5bjQfSlrSTrtiw5hlWyVN8bMsfIHggLZaCt4uIYW07',
   ver: '1.0A',
   null: null,
-  algo: 'HMAC-SHA1'
+  algo: 'HMAC-SHA1',
+
 }
