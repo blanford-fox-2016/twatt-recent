@@ -30,6 +30,9 @@ function get_data_cb(url, callBack){
 }
 
 module.exports = {
+  // ============================================
+  // API
+  //=============================================
   getHome: function(req, res, next){
     var url = 'https://api.twitter.com/1.1/statuses/home_timeline.json'
     get_data_cb(url, function( data){
@@ -40,6 +43,16 @@ module.exports = {
     var url = 'https://api.twitter.com/1.1/statuses/user_timeline.json'
     get_data_cb(url, function(data){
       res.json(JSON.parse(data))
+    })
+  },
+
+  // ============================================
+  // View
+  //=============================================
+  viewHome: function(req, res, next){
+    var url = 'https://api.twitter.com/1.1/statuses/home_timeline.json'
+    get_data_cb(url, function( data){
+      res.render('index', {title: "twatt-recent", data: data})
     })
   }
 }
