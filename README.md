@@ -9,6 +9,12 @@ Username's twitter : [twitter.comkenduigraha](kenduigraha)
 * User's Home
 > `curl -X GET "localhost:3000/oauth/home"`
 
+### Access User Interface
+> `http://localhost:3000`
+
+> `http://localhost:3000/timeline`
+
+
 * POSTMAN
   1. Click Authorization
   2. Type: OAuth 1.0
@@ -21,17 +27,17 @@ Username's twitter : [twitter.comkenduigraha](kenduigraha)
 ************************************
 
 ## Installation:
-> Install Newest Node JS (v6.\*.\* LTS) : [nodeJS](https://nodejs.org/en/)
+  1. Install Newest Node JS (v6.\*.\* LTS) : [nodeJS](https://nodejs.org/en/)
 
-> npm install -g express
+  2. npm install -g express
 
-> npm install -g express-generator
+  3. npm install -g express-generator
 
-> express . (for express generator) & npm install
+  4. express . (for express generator) & npm install
 
-> npm install --save express (for manual express)
+  5. npm install --save express (for manual express)
 
-> npm install --save-dev nodemon
+  6. npm install --save-dev nodemon
 
 
 Pretty Json : (Add '| prettyjson' after installation)
