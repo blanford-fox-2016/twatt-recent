@@ -17,12 +17,4 @@ module.exports = {
       res.json(JSON.parse(data));
     });
   },
-
-  searchTweet: (req, res, next) => {
-    let link = `https://api.twitter.com/1.1/search/tweets.json?q=${req.params.keyword}`;
-
-    AuthTwitter.getData(link, (data) => {
-      res.json(JSON.parse(data));
-    });
-  }
 }
