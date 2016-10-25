@@ -5,9 +5,8 @@ var controller = require('../controller/controller')
 // ============================================
 // API
 //=============================================
-router.get('/api/home', controller.getHome)
+router.get('/home', controller.getHome)
 
-router.get('/api/timeline', controller.getTimeline)
-
+router.get('/timeline', controller.getTimeline)
 
 module.exports = router;
