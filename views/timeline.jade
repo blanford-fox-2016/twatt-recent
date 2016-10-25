@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  .container
+    h1= title
+    p Timeline #{title}
+    table
+      - for(var i = 0 ; i < show_data_timeline.length ; i++)
+          thead
+           tr
+            th(data-field="id") Name: #{show_data_timeline[i].user.name} - @#{show_data_timeline[i].user.screen_name}
+           tbody
+             tr
+               td #{show_data_timeline[i].text}

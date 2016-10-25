@@ -1,0 +1,21 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    <!-- Compiled and minified CSS -->
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css")
+
+    <!-- Compiled and minified JavaScript -->
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js")
+
+  body
+    nav
+      .nav-wrapper
+        a(href="#" class="brand-logo") Logo
+        ul(id="nav-mobile" class="right hide-on-med-and-down")
+          li
+            a(href="/") Home
+          li
+            a(href="/timeline") Timeline
+    block content
